@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Display Large normal-->
+    <style name="TextAppearance.MyApp.Display.Large" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">57sp</item>
+        <item name="android:letterSpacing">-0</item>
+        <item name="lineHeight">64sp</item>
+    </style>
+
+    <!--Display Large bold-->
+    <style name="TextAppearance.MyApp.Display.Large.Bold" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">57sp</item>
+        <item name="android:letterSpacing">-0</item>
+        <item name="lineHeight">64sp</item>
+    </style>
+
+    <!--Display Large light-->
+    <style name="TextAppearance.MyApp.Display.Large.Light" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">57sp</item>
+        <item name="android:letterSpacing">-0</item>
+        <item name="lineHeight">64sp</item>
+    </style>
+
+    <!--Display Large medium-->
+    <style name="TextAppearance.MyApp.Display.Large.Medium" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">57sp</item>
+        <item name="android:letterSpacing">-0</item>
+        <item name="lineHeight">64sp</item>
+    </style>
+
+    <!--Display Large Semibold-->
+    <style name="TextAppearance.MyApp.Display.Large.Semibold" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">57sp</item>
+        <item name="android:letterSpacing">-0</item>
+        <item name="lineHeight">64sp</item>
+    </style>
+
+    <!--Display Medium normal-->
+    <style name="TextAppearance.MyApp.Display.Medium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">52sp</item>
+    </style>
+
+    <!--Display Medium bold-->
+    <style name="TextAppearance.MyApp.Display.Medium.Bold" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">52sp</item>
+    </style>
+
+    <!--Display Medium light-->
+    <style name="TextAppearance.MyApp.Display.Medium.Light" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">52sp</item>
+    </style>
+
+    <!--Display Medium medium-->
+    <style name="TextAppearance.MyApp.Display.Medium.Medium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">52sp</item>
+    </style>
+
+    <!--Display Medium Semibold-->
+    <style name="TextAppearance.MyApp.Display.Medium.Semibold" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">52sp</item>
+    </style>
+
+    <!--Display Small Normal-->
+    <style name="TextAppearance.MyApp.Display.Small" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">44sp</item>
+    </style>
+
+    <!--Display Small Bold-->
+    <style name="TextAppearance.MyApp.Display.Small.Bold" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">44sp</item>
+    </style>
+
+    <!--Display Small Light-->
+    <style name="TextAppearance.MyApp.Display.Small.Light" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">44sp</item>
+    </style>
+
+    <!--Display Small Medium-->
+    <style name="TextAppearance.MyApp.Display.Small.Medium" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">44sp</item>
+    </style>
+
+    <!--Display Small Semibold-->
+    <style name="TextAppearance.MyApp.Display.Small.Semibold" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">44sp</item>
+    </style>
+
+    <!--Headline Large Normal-->
+    <style name="TextAppearance.MyApp.Headline.Large" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">40sp</item>
+    </style>
+
+    <style name="TextAppearance.MyApp.Headline.Large.Bold" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">40sp</item>
+    </style>
+
+    <!--Headline Large Light-->
+    <style name="TextAppearance.MyApp.Headline.Large.Light" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">40sp</item>
+    </style>
+
+    <!--Headline Large Medium-->
+    <style name="TextAppearance.MyApp.Headline.Large.Medium" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">40sp</item>
+    </style>
+
+    <!--Headline Large Semibold-->
+    <style name="TextAppearance.MyApp.Headline.Large.Semibold" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">40sp</item>
+    </style>
+
+    <!--Headline Medium Normal-->
+    <style name="TextAppearance.MyApp.Headline.Medium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <!--Headline Medium Bold-->
+    <style name="TextAppearance.MyApp.Headline.Medium.Bold" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <!--Headline Medium Light-->
+    <style name="TextAppearance.MyApp.Headline.Medium.Light" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <!--Headline Medium Medium-->
+    <style name="TextAppearance.MyApp.Headline.Medium.Medium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <!--Headline Medium Semibold-->
+    <style name="TextAppearance.MyApp.Headline.Medium.Semibold" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <!--Headline Small Normal-->
+    <style name="TextAppearance.MyApp.Headline.Small" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <!--Headline Small Bold-->
+    <style name="TextAppearance.MyApp.Headline.Small.Bold" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <!--Headline Small Light-->
+    <style name="TextAppearance.MyApp.Headline.Small.Light" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <!--Headline Small Medium-->
+    <style name="TextAppearance.MyApp.Headline.Small.Medium" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <!--Headline Small Semibold-->
+    <style name="TextAppearance.MyApp.Headline.Small.Semibold" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <!--Title Large Normal-->
+    <style name="TextAppearance.MyApp.Title.Large" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+    <!--Title Large Bold-->
+    <style name="TextAppearance.MyApp.Title.Large.Bold" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+    <!--Title Large Light-->
+    <style name="TextAppearance.MyApp.Title.Large.Light" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+    <!--Title Large Medium-->
+    <style name="TextAppearance.MyApp.Title.Large.Medium" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+    <!--Title Large Semibold-->
+    <style name="TextAppearance.MyApp.Title.Large.Semibold" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+    <!--Title Medium Normal-->
+    <style name="TextAppearance.MyApp.Title.Medium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Title Medium Bold-->
+    <style name="TextAppearance.MyApp.Title.Medium.Bold" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Title Medium Light-->
+    <style name="TextAppearance.MyApp.Title.Medium.Light" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Title Medium Medium-->
+    <style name="TextAppearance.MyApp.Title.Medium.Medium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Title Medium Semibold-->
+    <style name="TextAppearance.MyApp.Title.Medium.Semibold" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Title Small Normal-->
+    <style name="TextAppearance.MyApp.Title.Small" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Title Small Bold-->
+    <style name="TextAppearance.MyApp.Title.Small.Bold" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Title Small Light-->
+    <style name="TextAppearance.MyApp.Title.Small.Light" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Title Small Medium-->
+    <style name="TextAppearance.MyApp.Title.Small.Medium" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Title Small Semibold-->
+    <style name="TextAppearance.MyApp.Title.Small.Semibold" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Label Large Normal-->
+    <style name="TextAppearance.MyApp.Label.Large" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Label Large Bold-->
+    <style name="TextAppearance.MyApp.Label.Large.Bold" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Label Large Light-->
+    <style name="TextAppearance.MyApp.Label.Large.Light" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Label Large Medium-->
+    <style name="TextAppearance.MyApp.Label.Large.Medium" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Label Large Semibold-->
+    <style name="TextAppearance.MyApp.Label.Large.Semibold" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Label Medium Normal-->
+    <style name="TextAppearance.MyApp.Label.Medium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Medium Bold-->
+    <style name="TextAppearance.MyApp.Label.Medium.Bold" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Medium Light-->
+    <style name="TextAppearance.MyApp.Label.Medium.Light" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Medium Medium-->
+    <style name="TextAppearance.MyApp.Label.Medium.Medium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Medium Semibold-->
+    <style name="TextAppearance.MyApp.Label.Medium.Semibold" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Small Normal-->
+    <style name="TextAppearance.MyApp.Label.Small" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Small Bold-->
+    <style name="TextAppearance.MyApp.Label.Small.Bold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Small Light-->
+    <style name="TextAppearance.MyApp.Label.Small.Light" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Small Medium-->
+    <style name="TextAppearance.MyApp.Label.Small.Medium" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Label Small Semibold-->
+    <style name="TextAppearance.MyApp.Label.Small.Semibold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Body Large Normal-->
+    <style name="TextAppearance.MyApp.Body.Large" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Body Large Bold-->
+    <style name="TextAppearance.MyApp.Body.Large.Bold" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Body Large Light-->
+    <style name="TextAppearance.MyApp.Body.Large.Light" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Body Large Medium-->
+    <style name="TextAppearance.MyApp.Body.Large.Medium" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Body Large Semibold-->
+    <style name="TextAppearance.MyApp.Body.Large.Semibold" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <!--Body Medium Normal-->
+    <style name="TextAppearance.MyApp.Body.Medium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Body Medium Bold-->
+    <style name="TextAppearance.MyApp.Body.Medium.Bold" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Body Medium Light-->
+    <style name="TextAppearance.MyApp.Body.Medium.Light" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Body Medium Medium-->
+    <style name="TextAppearance.MyApp.Body.Medium.Medium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Body Medium Semibold-->
+    <style name="TextAppearance.MyApp.Body.Medium.Semibold" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!--Body Small Normal-->
+    <style name="TextAppearance.MyApp.Body.Small" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Body Small Bold-->
+    <style name="TextAppearance.MyApp.Body.Small.Bold" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Body Small Light-->
+    <style name="TextAppearance.MyApp.Body.Small.Light" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Body Small Medium-->
+    <style name="TextAppearance.MyApp.Body.Small.Medium" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--Body Small Semibold-->
+    <style name="TextAppearance.MyApp.Body.Small.Semibold" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+</resources>
