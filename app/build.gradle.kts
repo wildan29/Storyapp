@@ -2,9 +2,9 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("kotlin-parcelize")
+    kotlin("kapt")
     id("com.google.dagger.hilt.android")
     id("androidx.navigation.safeargs.kotlin")
-    kotlin("kapt")
 }
 
 // define major, minor, patch for version code and version name
@@ -106,6 +106,10 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.42")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     implementation("android.arch.lifecycle:extensions:1.1.1")
+
+    //Logging
+    implementation("com.jakewharton.timber:timber:5.0.1")
+    implementation("com.orhanobut:logger:2.2.0")
 
     // test implementation
     testImplementation("junit:junit:4.13.2")
