@@ -54,4 +54,23 @@
         <!--Windowbackground-->
         <item name="android:windowBackground">@color/md_theme_light_background</item>
     </style>
+
+    <!--Splash Screen-->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="windowSplashScreenBackground">@color/md_theme_light_background</item>
+
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
+             animated drawable. One of these is required. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/group_226</item>
+        <!-- Required for animated icons -->
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <!-- Required -->
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+
+        <!--Light Status Bar-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
 </resources>

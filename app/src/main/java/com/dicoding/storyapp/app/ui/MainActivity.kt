@@ -2,13 +2,37 @@ package com.dicoding.storyapp.app.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.dicoding.storyapp.R
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.dicoding.storyapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        // splash screen
+        val splashScreen = installSplashScreen()
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        // define binding
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        // splash screen animation
+        splashScreen.setOnExitAnimationListener { splashScreenViewProvider ->
+            splashScreenViewProvider.iconView
+                .animate()
+                .setDuration(
+                    500
+                ).translationY(-0f)
+                .alpha(0f)
+                .withEndAction {
+                    // After the fade out, remove the
+                    // splash and set content view
+                    splashScreenViewProvider.remove()
+                }.start()
+        }
+
+        setContentView(binding.root)
     }
 }
