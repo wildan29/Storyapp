@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.konan.properties.Properties
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -51,11 +53,15 @@ android {
                 "proguard-rules.pro"
             )
 
+            val properties = Properties().apply {
+                load(rootProject.file("/config/release.properties").reader())
+            }
+
             // build config for BASE_URL
             buildConfigField(
                 "String",
                 "BASE_URL",
-                "\"https://story-api.dicoding.dev/v1/\""
+                "${properties["BASE_URL"]}"
             )
         }
 
@@ -66,11 +72,15 @@ android {
             isDebuggable = true
             isMinifyEnabled = false
 
+            val properties = Properties().apply {
+                load(rootProject.file("/config/debug.properties").reader())
+            }
+
             // build config for BASE_URL
             buildConfigField(
                 "String",
                 "BASE_URL",
-                "\"https://story-api.dicoding.dev/v1/\""
+                "${properties["BASE_URL"]}"
             )
         }
     }
