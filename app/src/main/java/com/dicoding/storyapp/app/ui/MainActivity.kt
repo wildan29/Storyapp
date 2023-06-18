@@ -2,6 +2,7 @@ package com.dicoding.storyapp.app.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.dicoding.storyapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,6 +33,9 @@ class MainActivity : AppCompatActivity() {
                     splashScreenViewProvider.remove()
                 }.start()
         }
+
+        // Light mode only
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         setContentView(binding.root)
     }
