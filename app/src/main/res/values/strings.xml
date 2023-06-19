@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Storyapp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="welcome_back">Welcome back</string>
+    <string name="icon_welcome">icon welcome</string>
+    <string name="login_headline_1">We happy to see you again. To use your account, you should login first</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="icon_register">icon register</string>
+    <string name="register_headline_1">Please fill in the forms to continue</string>
+    <string name="name">Name</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
 </resources>

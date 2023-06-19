@@ -4,12 +4,17 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import com.dicoding.storyapp.R
 import com.dicoding.storyapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navControllerLogin: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         // splash screen
         val splashScreen = installSplashScreen()
@@ -35,8 +40,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Light mode only
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        // create nav host
+        val navHostFragmentLogin =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
+
+        // create nav controller
+        navControllerLogin = navHostFragmentLogin.navController
 
         setContentView(binding.root)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navControllerLogin.navigateUp() || super.onSupportNavigateUp()
+    }
+
 }

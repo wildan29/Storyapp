@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".app.ui.fragment.LoginFragment">
+    tools:context=".app.ui.fragment.RegisterFragment">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView"
         style="@style/TextAppearance.MyApp.Title.Large.Bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome_back"
+        android:text="@string/create_new_account"
         android:textColor="@color/md_theme_light_primary"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +23,8 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="10dp"
-        android:contentDescription="@string/icon_welcome"
-        android:src="@drawable/icon_hand"
+        android:contentDescription="@string/icon_register"
+        android:src="@drawable/icon_fire"
         app:layout_constraintStart_toEndOf="@+id/materialTextView"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
@@ -34,37 +34,59 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/login_headline_1"
+        android:text="@string/register_headline_1"
         android:textColor="@color/md_theme_light_outline"
         app:layout_constraintStart_toStartOf="@+id/materialTextView"
-        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_login"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:hint="@string/email"
+        android:hint="@string/name"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView1"
-        app:startIconDrawable="@drawable/ic_baseline_email_24">
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_email_login"
+            android:id="@+id/edt_name_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:labelFor="@id/email_login"
+            android:labelFor="@id/name"
             android:maxLines="1"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwrod_login"
+        android:id="@+id/email_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/email"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_email_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:labelFor="@id/email_register"
+            android:maxLines="1"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwrod_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -72,11 +94,11 @@
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_login"
+        app:layout_constraintTop_toBottomOf="@+id/email_register"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
         <com.dicoding.storyapp.app.ui.customview.EditTextPassword
-            android:id="@+id/edt_pw_login"
+            android:id="@+id/edt_pw_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -85,47 +107,40 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_signup"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="40dp"
-        android:text="@string/login"
+        android:text="@string/sign_up"
         android:textAppearance="@style/TextAppearance.MyApp.Title.Medium.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwrod_login" />
+        app:layout_constraintTop_toBottomOf="@+id/passwrod_register" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView2"
         style="@style/TextAppearance.MyApp.Body.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/don_t_have_an_account"
+        android:text="@string/already_have_an_account"
         android:textColor="@color/md_theme_light_outline"
         app:layout_constraintBottom_toBottomOf="@id/guideline1"
-        app:layout_constraintEnd_toStartOf="@+id/signUp"
+        app:layout_constraintEnd_toStartOf="@+id/login"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/signUp"
+        android:id="@+id/login"
         style="@style/TextAppearance.MyApp.Body.Medium.Bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:text="@string/sign_up"
+        android:text="@string/login"
         android:textColor="@color/md_theme_light_primary"
         app:layout_constraintBottom_toBottomOf="@id/guideline1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/materialTextView2" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.975" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -133,5 +148,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.975" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

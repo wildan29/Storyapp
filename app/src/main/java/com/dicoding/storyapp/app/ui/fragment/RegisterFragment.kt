@@ -6,23 +6,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.dicoding.storyapp.R
-import com.dicoding.storyapp.databinding.FragmentLoginBinding
+import com.dicoding.storyapp.databinding.FragmentRegisterBinding
 
-class LoginFragment : Fragment() {
-    private var _binding: FragmentLoginBinding? = null
+class RegisterFragment : Fragment() {
+    private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         // define binding
-        _binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentRegisterBinding.inflate(layoutInflater, container, false)
 
-        _binding?.signUp?.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        _binding?.login?.setOnClickListener {
+            findNavController().navigateUp()
         }
 
         return binding.root
@@ -32,5 +30,4 @@ class LoginFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
 }
