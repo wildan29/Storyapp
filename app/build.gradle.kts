@@ -124,6 +124,10 @@ dependencies {
     // splash screen
     implementation("androidx.core:core-splashscreen:1.0.1")
 
+    // navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3"    )
+
     // test implementation
     testImplementation("junit:junit:4.13.2")
 
