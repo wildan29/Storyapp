@@ -126,7 +126,32 @@ dependencies {
 
     // navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.3"    )
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+
+    // Preference Data Store
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    // Corutine
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
+
+    // Coroutine Lifecycle Scopes
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0")
+
+    // Activity KTX for viewModels()
+    implementation("androidx.activity:activity-ktx:1.1.0")
+
+    // retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+
+    //Circle Image
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    // glide
+    implementation("com.github.bumptech.glide:glide:4.12.0")
 
     // test implementation
     testImplementation("junit:junit:4.13.2")
@@ -136,26 +161,26 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-// copy debug apk when build project is done
-tasks.register("copyAPKDebug", Copy::class) {
-    dependsOn("test")
-    val soureDir = layout.buildDirectory.dir("outputs/apk/debug/app-debug.apk")
-    val destDir = "$rootDir/apk"
-    from(soureDir)
-    into(destDir)
-    rename("app-debug.apk", "storyAppDebug.apk")
-
-    // Untuk cek apakah aplikasi ada virus atau tidak, bisa diliath dari MD5 yang sudah di generate
-    doLast {
-        val filePath = File(destDir, "storyAppDebug.apk")
-        ant.withGroovyBuilder {
-            "checksum"("file" to filePath.path)
-        }
-    }
-}
-
-tasks.whenTaskAdded {
-    if (this.name == "assembleDebug") {
-        this.finalizedBy("copyAPKDebug")
-    }
-}
+//// copy debug apk when build project is done
+//tasks.register("copyAPKDebug", Copy::class) {
+//    dependsOn("test")
+//    val soureDir = layout.buildDirectory.dir("outputs/apk/debug/app-debug.apk")
+//    val destDir = "$rootDir/apk"
+//    from(soureDir)
+//    into(destDir)
+//    rename("app-debug.apk", "storyAppDebug.apk")
+//
+//    // Untuk cek apakah aplikasi ada virus atau tidak, bisa diliath dari MD5 yang sudah di generate
+//    doLast {
+//        val filePath = File(destDir, "storyAppDebug.apk")
+//        ant.withGroovyBuilder {
+//            "checksum"("file" to filePath.path)
+//        }
+//    }
+//}
+//
+//tasks.whenTaskAdded {
+//    if (this.name == "assembleDebug") {
+//        this.finalizedBy("copyAPKDebug")
+//    }
+//}

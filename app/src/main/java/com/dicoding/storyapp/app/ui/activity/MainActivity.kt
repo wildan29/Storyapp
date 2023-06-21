@@ -8,6 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.dicoding.storyapp.R
 import com.dicoding.storyapp.databinding.ActivityMainBinding
+import com.google.android.material.transition.platform.MaterialSharedAxis
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navControllerLogin: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // animation with MaterialSharedAxis
+        val exit = MaterialSharedAxis(MaterialSharedAxis.X, true)
+        window.exitTransition = exit
+
         // splash screen
         val splashScreen = installSplashScreen()
 
