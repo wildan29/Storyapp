@@ -87,6 +87,15 @@ class RegisterFragment : Fragment() {
                         bundleOf(Utils.GET_PASSWORD_KEY to binding.edtPwRegister.text.toString())
                     )
 
+                    // give toast to msg
+                    Toast.makeText(
+                        requireActivity(),
+                        resources.getString(R.string.sucess_create_new_account),
+                        Toast.LENGTH_SHORT
+                    )
+                        .show()
+
+                    // back to login fragment
                     findNavController().navigateUp()
                     viewModelRegister.navigates()
                 }

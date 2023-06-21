@@ -17,4 +17,6 @@
     <string name="error_message">Password must be at least 8 characters</string>
     <string name="validate_login">Please fill in the data completely</string>
     <string name="validate_register">Please fill in the data completely</string>
+    <string name="sucess_create_new_account">Account created successfully</string>
+    <string name="sucess_login">Login successful</string>
 </resources>

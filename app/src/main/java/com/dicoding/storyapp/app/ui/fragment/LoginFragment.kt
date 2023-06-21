@@ -1,5 +1,6 @@
 package com.dicoding.storyapp.app.ui.fragment
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -27,6 +28,7 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
     private val viewModelLogin by viewModels<ResponseLoginViewModel>()
+    private var cek = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -88,9 +90,16 @@ class LoginFragment : Fragment() {
             loginState.collect {
                 if (it.isNavigate == true) {
                     // change to dashboard activity
-                    startActivity(Intent(requireActivity(), DashboardActivity::class.java))
+                    val bundle =
+                        ActivityOptions.makeSceneTransitionAnimation(requireActivity()).toBundle()
+                    startActivity(Intent(requireActivity(), DashboardActivity::class.java), bundle)
+                    cek = true
                     viewModelLogin.navigates()
-                    activity?.finish()
+                    Toast.makeText(
+                        requireActivity(),
+                        resources.getString(R.string.sucess_login),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
                 it.error?.also { error ->
                     Snackbar.make(
@@ -107,6 +116,13 @@ class LoginFragment : Fragment() {
                     ).show()
                 }
             }
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (cek) {
+            activity?.finishAfterTransition()
         }
     }
 

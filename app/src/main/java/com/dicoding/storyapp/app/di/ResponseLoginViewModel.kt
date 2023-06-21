@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dicoding.storyapp.app.ui.customview.EditTextPassword
 import com.dicoding.storyapp.data.di.LoginSession
 import com.dicoding.storyapp.data.models.LoginDataModel
 import com.dicoding.storyapp.data.models.LoginResponseDataModel
@@ -22,7 +21,7 @@ import javax.inject.Inject
 @HiltViewModel
 class ResponseLoginViewModel @Inject constructor(
     private val mainRepo: MainRepo,
-    val loginSession: LoginSession
+    private val loginSession: LoginSession
 ) : ViewModel() {
     private val _res = MutableLiveData<Resource<LoginResponseDataModel>>()
     val res: LiveData<Resource<LoginResponseDataModel>>
