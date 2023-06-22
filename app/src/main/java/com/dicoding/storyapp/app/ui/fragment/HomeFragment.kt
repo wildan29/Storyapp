@@ -70,6 +70,7 @@ class HomeFragment : Fragment() {
             navView.setNavigationItemSelectedListener { menuItem ->
                 when (menuItem.itemId) {
                     R.id.mains -> {
+                        drawerLayout.closeDrawers()
                         activity?.supportFragmentManager?.popBackStackImmediate()
                         activity?.supportFragmentManager?.beginTransaction()
                             ?.replace(
@@ -81,6 +82,7 @@ class HomeFragment : Fragment() {
                         popEveryFragment()
                     }
                     R.id.info -> {
+                        drawerLayout.closeDrawers()
                         activity?.supportFragmentManager?.beginTransaction()
                             ?.replace(
                                 R.id.content,
@@ -96,11 +98,12 @@ class HomeFragment : Fragment() {
                         ).show()
                     }
                     R.id.logout -> {
+                        drawerLayout.closeDrawers()
                         alertDialog()
                     }
                 }
                 menuItem.isChecked = true
-                drawerLayout.close()
+                drawerLayout.closeDrawers()
                 true
             }
 
@@ -110,7 +113,7 @@ class HomeFragment : Fragment() {
                 .addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
                     override fun handleOnBackPressed() {
                         if (drawerLayout.isOpen) {
-                            drawerLayout.close()
+                            drawerLayout.closeDrawers()
                         } else {
                             // if you want onBackPressed() to be called as normal afterwards
                             if (isEnabled) {

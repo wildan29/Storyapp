@@ -75,7 +75,7 @@ class DashboardActivity : AppCompatActivity() {
                 }, 2000)
             } else {
                 if (drawerLayout.isOpen) {
-                    drawerLayout.close()
+                    drawerLayout.closeDrawers()
                 } else {
                     super.onBackPressed()
                 }
