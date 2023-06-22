@@ -13,16 +13,26 @@ import androidx.fragment.app.viewModels
 import com.dicoding.storyapp.R
 import com.dicoding.storyapp.app.di.HomeViewModel
 import com.dicoding.storyapp.app.ui.activity.MainActivity
+import com.dicoding.storyapp.data.di.LoginSession
 import com.dicoding.storyapp.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.textview.MaterialTextView
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
 import timber.log.Timber
+import javax.inject.Inject
+
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val viewModelHome by viewModels<HomeViewModel>()
+
+    @Inject
+    lateinit var loginSession: LoginSession
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -111,6 +121,11 @@ class HomeFragment : Fragment() {
                     }
                 }
                 )
+
+            // set username
+            val headerView = navView.getHeaderView(0)
+            val username = headerView.findViewById<MaterialTextView>(R.id.username)
+            username.text = getUsername()
         }
 
     }
@@ -154,6 +169,10 @@ class HomeFragment : Fragment() {
                 )
             }
         }
+    }
+
+    private fun getUsername() = runBlocking(Dispatchers.IO) {
+        loginSession.userNameFlow.first()
     }
 
     override fun onDestroy() {

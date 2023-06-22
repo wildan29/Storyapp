@@ -38,6 +38,7 @@ class ResponseLoginViewModel @Inject constructor(
                 _res.postValue(Resource.success(it.body()))
                 it.body()?.loginResult?.also { res ->
                     loginSession.updateLoginSession(res.token!!)
+                    loginSession.setUsername(res.name!!)
                     navigate()
                 }
             } else {

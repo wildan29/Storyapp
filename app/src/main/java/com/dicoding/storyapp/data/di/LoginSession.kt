@@ -26,13 +26,28 @@ class LoginSession @Inject constructor(@ApplicationContext private val context: 
             preference[PreferencesKeys.SESSION_TOKEN] ?: ""
         }
 
+
+    val userNameFlow = context.dataStore.data
+        .catch { exception ->
+            if (exception is IOException) emit(emptyPreferences()) else throw exception
+        }.map { preference ->
+            preference[PreferencesKeys.USER_NAME] ?: ""
+        }
+
     suspend fun updateLoginSession(token: String) {
         context.dataStore.edit { preferences ->
             preferences[PreferencesKeys.SESSION_TOKEN] = token
         }
     }
 
+    suspend fun setUsername(name: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferencesKeys.USER_NAME] = name
+        }
+    }
+
     private object PreferencesKeys {
         val SESSION_TOKEN = stringPreferencesKey("session_token_pref")
+        val USER_NAME = stringPreferencesKey("username_pref")
     }
 }
