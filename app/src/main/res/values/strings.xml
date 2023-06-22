@@ -19,4 +19,23 @@
     <string name="validate_register">Please fill in the data completely</string>
     <string name="sucess_create_new_account">Account created successfully</string>
     <string name="sucess_login">Login successful</string>
+    <string name="menu">Menu</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="open_nav">Open</string>
+    <string name="close_nav">Close</string>
+    <string name="username">Wildan</string>
+    <string name="email_user">Bangkit cohort 2023</string>
+    <string name="cooming_soon">Cooming soon!</string>
+    <string name="image_profile">Image profile</string>
+    <string name="home">Home</string>
+    <string name="post_story">Post story</string>
+    <string name="back_button_reminder">Please click back again to exit</string>
+    <string name="story_app_tag">Story_app_tag</string>
+    <string name="info_app_tag">Info_app_tag</string>
+    <string name="logout_title">Do you want to logout?</string>
+    <string name="logout_msg">If you log out then you will return to the login page</string>
+    <string name="YES">YES</string>
+    <string name="NO">NO</string>
+    <string name="logout_sucess">Log out successfully</string>
 </resources>

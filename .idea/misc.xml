@@ -4,11 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.235" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.197" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/font/poppins.xml" value="0.29907407407407405" />
-        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/fragment_info.xml" value="0.27447916666666666" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/fragment_login.xml" value="0.264" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/fragment_register.xml" value="0.264" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/fragment_story.xml" value="0.176" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/header_navigation.xml" value="0.536" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/menu/navigation_drawer.xml" value="0.264" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/menu/top_app_bar.xml" value="0.2734375" />
       </map>
     </option>
   </component>
