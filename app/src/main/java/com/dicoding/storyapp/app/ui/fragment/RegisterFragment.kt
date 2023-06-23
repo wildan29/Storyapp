@@ -45,7 +45,27 @@ class RegisterFragment : Fragment() {
                 val password = edtPwRegister.text.toString()
 
                 if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
-                    viewModelRegister.responseRegister(RegisterDataModel(name, email, password))
+                    if (Utils.isNetworkAvailable(requireActivity())) {
+                        viewModelRegister.responseRegister(RegisterDataModel(name, email, password))
+                    } else {
+                        Snackbar.make(
+                            requireView(),
+                            "No internet access",
+                            Snackbar.LENGTH_INDEFINITE
+                        )
+                            .setAction("Try") {
+                                if (Utils.isNetworkAvailable(requireActivity())) {
+                                    viewModelRegister.responseRegister(
+                                        RegisterDataModel(
+                                            name,
+                                            email,
+                                            password
+                                        )
+                                    )
+                                }
+                            }
+                            .show()
+                    }
                 } else {
                     Toast.makeText(
                         requireActivity(),
