@@ -38,4 +38,10 @@
     <string name="YES">YES</string>
     <string name="NO">NO</string>
     <string name="logout_sucess">Log out successfully</string>
+    <string name="story_picture">Story picture</string>
+    <string name="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+    <string name="title_story">Title</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_story">image_story</string>
 </resources>

@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             splashScreenViewProvider.iconView
                 .animate()
                 .setDuration(
-                    1000
+                    500
                 ).translationY(-0f)
                 .alpha(0f)
                 .withEndAction {

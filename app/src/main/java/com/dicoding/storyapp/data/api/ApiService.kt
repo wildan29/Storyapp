@@ -1,12 +1,8 @@
 package com.dicoding.storyapp.data.api
 
-import com.dicoding.storyapp.data.models.LoginDataModel
-import com.dicoding.storyapp.data.models.LoginResponseDataModel
-import com.dicoding.storyapp.data.models.RegisterDataModel
-import com.dicoding.storyapp.data.models.RegisterResponseDataModel
+import com.dicoding.storyapp.data.models.*
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiService {
     @POST("login")
@@ -18,4 +14,13 @@ interface ApiService {
     suspend fun reponseRegister(
         @Body registerDataModel: RegisterDataModel
     ): Response<RegisterResponseDataModel>
+
+    @GET("stories")
+    suspend fun getStories(@Header("Authorization") token: String): Response<AllStoriesResponse>
+
+    @GET("stories/{id}")
+    suspend fun getStoryDetail(
+        @Path("id") id: String, @Header("Authorization") token: String
+    ): Response<DetailStoryResponseDataModel>
+
 }

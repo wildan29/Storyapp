@@ -11,4 +11,8 @@ class MainRepo @Inject constructor(private val apiHelper: ApiHelper) {
 
     suspend fun responseRegister(registerDataModel: RegisterDataModel) =
         apiHelper.responseRegister(registerDataModel)
+
+    suspend fun getStories(token: String) = apiHelper.getStories(token)
+
+    suspend fun getStoriesDetail(id: String, token: String) = apiHelper.getDetailStories(id, token)
 }
