@@ -3,6 +3,8 @@ package com.dicoding.storyapp.data.repo
 import com.dicoding.storyapp.data.api.ApiService
 import com.dicoding.storyapp.data.models.*
 import com.dicoding.storyapp.domain.usecases.ApiHelper
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -24,5 +26,13 @@ class ApiHelperImpl @Inject constructor(private val apiService: ApiService) : Ap
         token: String
     ): Response<DetailStoryResponseDataModel> {
         return apiService.getStoryDetail(id, token)
+    }
+
+    override suspend fun addStories(
+        file: MultipartBody.Part,
+        description: RequestBody,
+        token: String
+    ): Response<AddStoryResponseDataModel> {
+        return apiService.addStories(file, description, token)
     }
 }

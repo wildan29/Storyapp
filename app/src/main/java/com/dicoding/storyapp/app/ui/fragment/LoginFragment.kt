@@ -63,7 +63,21 @@ class LoginFragment : Fragment() {
                 val email = edtEmailLogin.text.toString()
                 val password = edtPwLogin.text.toString()
                 if (email.isNotEmpty() && password.isNotEmpty()) {
-                    viewModelLogin.responseLogin(LoginDataModel(email, password))
+                    if (Utils.isNetworkAvailable(requireActivity())) {
+                        viewModelLogin.responseLogin(LoginDataModel(email, password))
+                    } else {
+                        Snackbar.make(
+                            requireView(),
+                            "No internet access",
+                            Snackbar.LENGTH_INDEFINITE
+                        )
+                            .setAction("Try") {
+                                if (Utils.isNetworkAvailable(requireActivity())) {
+                                    viewModelLogin.responseLogin(LoginDataModel(email, password))
+                                }
+                            }
+                            .show()
+                    }
                 } else {
                     Toast.makeText(
                         requireActivity(),

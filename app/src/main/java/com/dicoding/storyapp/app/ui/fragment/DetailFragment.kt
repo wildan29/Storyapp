@@ -6,13 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.dicoding.storyapp.app.di.DetailViewModel
-import com.dicoding.storyapp.app.utils.Utils
+import com.dicoding.storyapp.data.models.ListStoryItem
 import com.dicoding.storyapp.databinding.FragmentDetailBinding
-import com.dicoding.storyapp.domain.models.DetailState
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,28 +32,13 @@ class DetailFragment : Fragment() {
         binding.apply {
 
             topAppBar.setNavigationOnClickListener {
-                findNavController().navigateUp()
+                activity?.onBackPressed()
             }
-            
-            viewModelDetail.detailState.observe(viewLifecycleOwner) {
-                Utils.showLoading(progressIndicator, it is DetailState.Loading)
-                when (it) {
-                    is DetailState.Loading -> {}
-                    is DetailState.Success -> {
-                        Glide.with(requireContext())
-                            .load(it.story.photoUrl)
-                            .into(detailStory)
-                        title.text = it.story.name
-                        sub.text = it.story.description
-                    }
-                    is DetailState.Error -> {
-                        Snackbar.make(
-                            requireView(),
-                            it.message,
-                            Snackbar.LENGTH_SHORT
-                        ).show()
-                    }
-                }
+
+            val story: ListStoryItem? = arguments?.getParcelable("story")
+
+            if (story != null) {
+                displayDetail(story)
             }
         }
     }
@@ -64,5 +46,15 @@ class DetailFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    private fun displayDetail(data: ListStoryItem) {
+        binding.apply {
+            Glide.with(requireContext())
+                .load(data.photoUrl)
+                .into(detailStory)
+            title.text = data.name
+            sub.text = data.description
+        }
     }
 }

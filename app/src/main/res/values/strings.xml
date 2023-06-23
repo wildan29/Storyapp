@@ -44,4 +44,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_story">image_story</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload</string>
+    <string name="camerax">CameraX</string>
+    <string name="description">Description</string>
+    <string name="camera">camera</string>
+    <string name="switch_camera">switch camera</string>
+    <string name="failed_camera">Failed to open the camera</string>
 </resources>

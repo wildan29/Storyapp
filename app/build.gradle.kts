@@ -16,12 +16,12 @@ val patch = 0
 
 android {
     namespace = "com.dicoding.storyapp"
-    compileSdk = 32
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.dicoding.storyapp"
         minSdk = 21
-        targetSdk = 32
+        targetSdk = 33
         versionCode = (major * 10000) + (minor * 100) + patch
         versionName = "$major.$minor.$patch"
 
@@ -158,6 +158,11 @@ dependencies {
 
     // circle image view
     implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    // camera
+    implementation("androidx.camera:camera-camera2:1.2.1")
+    implementation("androidx.camera:camera-lifecycle:1.2.1")
+    implementation("androidx.camera:camera-view:1.2.1")
 
     // test implementation
     testImplementation("junit:junit:4.13.2")

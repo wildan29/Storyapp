@@ -13,6 +13,7 @@ import com.dicoding.storyapp.app.di.StoryViewModel
 import com.dicoding.storyapp.app.ui.adapter.StoryListAdapter
 import com.dicoding.storyapp.app.utils.Status
 import com.dicoding.storyapp.app.utils.Utils
+import com.dicoding.storyapp.data.models.ListStoryItem
 import com.dicoding.storyapp.databinding.FragmentStoryBinding
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,6 +23,7 @@ class StoryFragment : Fragment() {
     private var _binding: FragmentStoryBinding? = null
     private val binding get() = _binding!!
     private val viewModelStory by viewModels<StoryViewModel>()
+    private lateinit var storyList: List<ListStoryItem?>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +43,10 @@ class StoryFragment : Fragment() {
 
         // create adapater
         val adapter = StoryListAdapter(onClick = { id ->
-            navigate(id!!)
+            val idData = getId(id)
+            if (idData != null) {
+                navigate(idData)
+            }
         })
 
         val layoutManager = LinearLayoutManager(requireContext())
@@ -58,20 +63,38 @@ class StoryFragment : Fragment() {
                 Utils.showLoading(progressIndicator, it.status == Status.LOADING)
                 when (it.status) {
                     Status.SUCCESS -> {
+                        storyList = it.data?.listStory!!
                         adapter.submitList(it.data?.listStory)
                     }
                     Status.LOADING -> {}
                     Status.ERROR -> {}
                 }
             }
-        }
 
+            floatingActionButton.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_addStoryFragment)
+            }
+
+        }
 
     }
 
-    private fun navigate(id : String){
-        val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(id)
-        findNavController().navigate(action)
+    private fun getId(storyId: String?): ListStoryItem? {
+        return storyList.find { it?.id == storyId }
+    }
+
+
+    private fun navigate(id: ListStoryItem) {
+        val bundle = Bundle()
+        bundle.putParcelable("story", id)
+
+        val detailFragment = DetailFragment()
+        detailFragment.arguments = bundle
+
+        val transaction = parentFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragmentContainerView, detailFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 
     override fun onDestroy() {
