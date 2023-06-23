@@ -7,6 +7,7 @@
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.235" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.197" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/font/poppins.xml" value="0.29907407407407405" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/a.xml" value="0.27447916666666666" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/fragment_add_story.xml" value="0.27447916666666666" />
@@ -18,7 +19,10 @@
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/fragment_register.xml" value="0.264" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/fragment_story.xml" value="0.264" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/header_navigation.xml" value="0.43052837573385516" />
-        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/list_story.xml" value="0.4" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/list_story.xml" value="0.21686746987951808" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/list_story_1.xml" value="0.2734375" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/no_internet_access.xml" value="0.2" />
+        <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/layout/no_internet_connection_layout.xml" value="0.2734375" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/menu/navigation_drawer.xml" value="0.264" />
         <entry key="..\:/Project/Bangkit/AndroidIntemediate/StoryApp1/app/src/main/res/menu/top_app_bar.xml" value="0.2734375" />
       </map>

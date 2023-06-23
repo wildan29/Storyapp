@@ -57,7 +57,12 @@ class StoryFragment : Fragment() {
                 it.adapter = adapter
             }
 
-            viewModelStory.getStories()
+            if (Utils.isNetworkAvailable(requireActivity())) {
+                internet.root.visibility = View.INVISIBLE
+                viewModelStory.getStories()
+            } else {
+                internet.root.visibility = View.VISIBLE
+            }
 
             viewModelStory.res.observe(viewLifecycleOwner) {
                 Utils.showLoading(progressIndicator, it.status == Status.LOADING)
