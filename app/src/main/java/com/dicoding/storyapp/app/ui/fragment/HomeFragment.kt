@@ -10,6 +10,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.dicoding.storyapp.R
 import com.dicoding.storyapp.app.di.HomeViewModel
 import com.dicoding.storyapp.app.ui.activity.MainActivity
@@ -80,6 +81,10 @@ class HomeFragment : Fragment() {
                             )
                             ?.commit()
                         popEveryFragment()
+                    }
+                    R.id.map -> {
+                        drawerLayout.close()
+                        findNavController().navigate(R.id.action_homeFragment_to_mapFragment)
                     }
                     R.id.info -> {
                         drawerLayout.closeDrawers()
@@ -161,15 +166,17 @@ class HomeFragment : Fragment() {
     private fun popEveryFragment() {
         // Clear all back stack.
         val backStackCount = activity?.supportFragmentManager?.backStackEntryCount
-        for (i in 0 until backStackCount!!) {
-            // Get the back stack fragment id.
-            val backStackId = activity?.supportFragmentManager?.getBackStackEntryAt(i)?.id
-            Timber.d("$backStackId")
-            if (backStackId != null) {
-                activity?.supportFragmentManager?.popBackStack(
-                    backStackId,
-                    FragmentManager.POP_BACK_STACK_INCLUSIVE
-                )
+        if (backStackCount != null) {
+            for (i in 0 until backStackCount) {
+                // Get the back stack fragment id.
+                val backStackId = activity?.supportFragmentManager?.getBackStackEntryAt(i)?.id
+                Timber.d("$backStackId")
+                if (backStackId != null) {
+                    activity?.supportFragmentManager?.popBackStack(
+                        backStackId,
+                        FragmentManager.POP_BACK_STACK_INCLUSIVE
+                    )
+                }
             }
         }
     }

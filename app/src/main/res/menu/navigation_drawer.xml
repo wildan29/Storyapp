@@ -9,6 +9,11 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/home" />
         <item
+            android:id="@+id/map"
+            android:checkable="true"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="Maps" />
+        <item
             android:id="@+id/info"
             android:checkable="true"
             android:icon="@drawable/ic_baseline_info_24"

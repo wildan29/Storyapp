@@ -33,6 +33,7 @@
     <string name="back_button_reminder">Please click back again to exit</string>
     <string name="story_app_tag">Story_app_tag</string>
     <string name="info_app_tag">Info_app_tag</string>
+    <string name="map_app_tag">Map_app_tag</string>
     <string name="logout_title">Do you want to logout?</string>
     <string name="logout_msg">If you log out then you will return to the login page</string>
     <string name="YES">YES</string>
