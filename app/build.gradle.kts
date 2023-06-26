@@ -63,6 +63,10 @@ android {
                 "BASE_URL",
                 "${properties["BASE_URL"]}"
             )
+
+
+            // add manifest placeholder
+            manifestPlaceholders["MAP_API"] = "${properties["MAP_API_KEY"]}"
         }
 
         getByName("debug") {
@@ -82,6 +86,9 @@ android {
                 "BASE_URL",
                 "${properties["BASE_URL"]}"
             )
+
+            // add manifest placeholder
+            manifestPlaceholders["MAP_API"] = "${properties["MAP_API_KEY"]}"
         }
     }
 
