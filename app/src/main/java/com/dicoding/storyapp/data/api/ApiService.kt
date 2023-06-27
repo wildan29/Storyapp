@@ -20,6 +20,12 @@ interface ApiService {
     @GET("stories")
     suspend fun getStories(@Header("Authorization") token: String): Response<AllStoriesResponse>
 
+    @GET("stories")
+    suspend fun getStoriesPaging(
+        @Header("Authorization") token: String, @Query("page") page: Int,
+        @Query("size") size: Int
+    ): AllStoriesResponseRoom
+
     @GET("stories/{id}")
     suspend fun getStoryDetail(
         @Path("id") id: String, @Header("Authorization") token: String
@@ -32,5 +38,11 @@ interface ApiService {
         @Part("description") description: RequestBody,
         @Header("Authorization") token: String
     ): Response<AddStoryResponseDataModel>
+
+    @GET("stories")
+    suspend fun getStoriesWithLocation(
+        @Header("Authorization") token: String,
+        @Query("location") location: Int = 1
+    ): AllStoriesResponseRoom
 
 }

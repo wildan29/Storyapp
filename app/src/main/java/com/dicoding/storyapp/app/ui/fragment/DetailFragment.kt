@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.dicoding.storyapp.app.di.DetailViewModel
-import com.dicoding.storyapp.data.models.ListStoryItem
+import com.dicoding.storyapp.app.utils.Utils
 import com.dicoding.storyapp.databinding.FragmentDetailBinding
+import com.dicoding.storyapp.domain.models.DetailState
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,11 +37,32 @@ class DetailFragment : Fragment() {
                 activity?.onBackPressed()
             }
 
-            val story: ListStoryItem? = arguments?.getParcelable("story")
-
-            if (story != null) {
-                displayDetail(story)
+            if (Utils.isNetworkAvailable(requireActivity())) {
+                internet.root.visibility = View.INVISIBLE
+                viewModelDetail.detailState.observe(viewLifecycleOwner) { uiState ->
+                    when (uiState) {
+                        is DetailState.Loading -> {
+                        }
+                        is DetailState.Success -> {
+                            title.text = uiState.story.name
+                            sub.text = uiState.story.description
+                            Glide.with(requireContext())
+                                .load(uiState.story.photoUrl)
+                                .into(detailStory)
+                        }
+                        is DetailState.Error -> {
+                            Snackbar.make(
+                                requireView(),
+                                uiState.message,
+                                Snackbar.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                }
+            } else {
+                internet.root.visibility = View.VISIBLE
             }
+
         }
     }
 
@@ -48,13 +71,4 @@ class DetailFragment : Fragment() {
         _binding = null
     }
 
-    private fun displayDetail(data: ListStoryItem) {
-        binding.apply {
-            Glide.with(requireContext())
-                .load(data.photoUrl)
-                .into(detailStory)
-            title.text = data.name
-            sub.text = data.description
-        }
-    }
 }

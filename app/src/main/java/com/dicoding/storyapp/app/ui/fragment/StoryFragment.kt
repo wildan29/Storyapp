@@ -11,9 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.storyapp.R
 import com.dicoding.storyapp.app.di.StoryViewModel
 import com.dicoding.storyapp.app.ui.adapter.StoryListAdapter
-import com.dicoding.storyapp.app.utils.Status
-import com.dicoding.storyapp.app.utils.Utils
-import com.dicoding.storyapp.data.models.ListStoryItem
+import com.dicoding.storyapp.data.models.StoryRoomDataModel
 import com.dicoding.storyapp.databinding.FragmentStoryBinding
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,7 +21,7 @@ class StoryFragment : Fragment() {
     private var _binding: FragmentStoryBinding? = null
     private val binding get() = _binding!!
     private val viewModelStory by viewModels<StoryViewModel>()
-    private lateinit var storyList: List<ListStoryItem?>
+    private lateinit var storyList: List<StoryRoomDataModel>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,9 +41,8 @@ class StoryFragment : Fragment() {
 
         // create adapater
         val adapter = StoryListAdapter(onClick = { id ->
-            val idData = getId(id)
-            if (idData != null) {
-                navigate(idData)
+            if (id != null) {
+                navigate(id)
             }
         })
 
@@ -57,23 +54,15 @@ class StoryFragment : Fragment() {
                 it.adapter = adapter
             }
 
-            if (Utils.isNetworkAvailable(requireActivity())) {
-                internet.root.visibility = View.INVISIBLE
-                viewModelStory.getStories()
-            } else {
-                internet.root.visibility = View.VISIBLE
-            }
+//            if (Utils.isNetworkAvailable(requireActivity())) {
+//                internet.root.visibility = View.INVISIBLE
+//                viewModelStory.getStories()
+//            } else {
+//                internet.root.visibility = View.VISIBLE
+//            }
 
-            viewModelStory.res.observe(viewLifecycleOwner) {
-                Utils.showLoading(progressIndicator, it.status == Status.LOADING)
-                when (it.status) {
-                    Status.SUCCESS -> {
-                        storyList = it.data?.listStory!!
-                        adapter.submitList(it.data?.listStory)
-                    }
-                    Status.LOADING -> {}
-                    Status.ERROR -> {}
-                }
+            viewModelStory.allStory.observe(viewLifecycleOwner) {
+                adapter.submitData(lifecycle = viewLifecycleOwner.lifecycle, pagingData = it)
             }
 
             floatingActionButton.setOnClickListener {
@@ -84,22 +73,9 @@ class StoryFragment : Fragment() {
 
     }
 
-    private fun getId(storyId: String?): ListStoryItem? {
-        return storyList.find { it?.id == storyId }
-    }
-
-
-    private fun navigate(id: ListStoryItem) {
-        val bundle = Bundle()
-        bundle.putParcelable("story", id)
-
-        val detailFragment = DetailFragment()
-        detailFragment.arguments = bundle
-
-        val transaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView, detailFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+    private fun navigate(id: String) {
+        val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(id)
+        findNavController().navigate(action)
     }
 
     override fun onDestroy() {

@@ -40,6 +40,7 @@
         <action
             android:id="@+id/action_addStoryFragment_to_homeFragment"
             app:destination="@id/homeFragment"
+            app:popUpTo="@id/addStoryFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_addStoryFragment_to_cameraFragment"

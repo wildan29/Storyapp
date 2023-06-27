@@ -74,5 +74,13 @@
         app:trackCornerRadius="2dp"
         tools:visibility="visible" />
 
+    <include
+        android:id="@+id/internet"
+        layout="@layout/no_internet_access"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

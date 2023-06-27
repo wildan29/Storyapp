@@ -3,20 +3,20 @@ package com.dicoding.storyapp.app.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dicoding.storyapp.R
-import com.dicoding.storyapp.data.models.ListStoryItem
+import com.dicoding.storyapp.data.models.StoryRoomDataModel
 import com.dicoding.storyapp.databinding.ListStoryBinding
 
 class StoryListAdapter(private val onClick: (String?) -> Unit) :
-    ListAdapter<ListStoryItem, StoryListAdapter.StoryViewHolder>(StoryDiffCallback) {
+    PagingDataAdapter<StoryRoomDataModel, StoryListAdapter.StoryViewHolder>(StoryDiffCallback) {
 
     class StoryViewHolder(private val binding: ListStoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: ListStoryItem, onClick: (String?) -> Unit) {
+        fun bind(item: StoryRoomDataModel, onClick: (String?) -> Unit) {
             binding.apply {
                 card.setOnClickListener {
                     onClick(item.id)
@@ -48,12 +48,20 @@ class StoryListAdapter(private val onClick: (String?) -> Unit) :
     }
 }
 
-object StoryDiffCallback : DiffUtil.ItemCallback<ListStoryItem>() {
-    override fun areItemsTheSame(oldItem: ListStoryItem, newItem: ListStoryItem): Boolean {
+object StoryDiffCallback : DiffUtil.ItemCallback<StoryRoomDataModel>() {
+
+
+    override fun areContentsTheSame(
+        oldItem: StoryRoomDataModel,
+        newItem: StoryRoomDataModel
+    ): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: ListStoryItem, newItem: ListStoryItem): Boolean {
+    override fun areItemsTheSame(
+        oldItem: StoryRoomDataModel,
+        newItem: StoryRoomDataModel
+    ): Boolean {
         return oldItem == newItem
     }
 }
