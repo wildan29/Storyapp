@@ -200,26 +200,26 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-//// copy debug apk when build project is done
-//tasks.register("copyAPKDebug", Copy::class) {
-//    dependsOn("test")
-//    val soureDir = layout.buildDirectory.dir("outputs/apk/debug/app-debug.apk")
-//    val destDir = "$rootDir/apk"
-//    from(soureDir)
-//    into(destDir)
-//    rename("app-debug.apk", "storyAppDebug.apk")
-//
-//    // Untuk cek apakah aplikasi ada virus atau tidak, bisa diliath dari MD5 yang sudah di generate
-//    doLast {
-//        val filePath = File(destDir, "storyAppDebug.apk")
-//        ant.withGroovyBuilder {
-//            "checksum"("file" to filePath.path)
-//        }
-//    }
-//}
-//
-//tasks.whenTaskAdded {
-//    if (this.name == "assembleDebug") {
-//        this.finalizedBy("copyAPKDebug")
-//    }
-//}
+// copy debug apk when build project is done
+tasks.register("copyAPKDebug", Copy::class) {
+    dependsOn("test")
+    val soureDir = layout.buildDirectory.dir("outputs/apk/debug/app-debug.apk")
+    val destDir = "$rootDir/apk"
+    from(soureDir)
+    into(destDir)
+    rename("app-debug.apk", "storyAppDebug.apk")
+
+    // Untuk cek apakah aplikasi ada virus atau tidak, bisa diliath dari MD5 yang sudah di generate
+    doLast {
+        val filePath = File(destDir, "storyAppDebug.apk")
+        ant.withGroovyBuilder {
+            "checksum"("file" to filePath.path)
+        }
+    }
+}
+
+tasks.whenTaskAdded {
+    if (this.name == "assembleDebug") {
+        this.finalizedBy("copyAPKDebug")
+    }
+}
